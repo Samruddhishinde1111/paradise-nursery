@@ -3,13 +3,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('/background.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  color: #fff;
-  text-shadow: 1px 1px 3px #000;
+  color: #333;
 }
 
 h1 {

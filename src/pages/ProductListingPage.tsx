@@ -13,6 +13,7 @@ const ProductListingPage: React.FC = () => {
     name: string;
     price: number;
     image: string;
+    category: string;
   }) => {
     dispatch(
       addToCart({
@@ -25,20 +26,29 @@ const ProductListingPage: React.FC = () => {
     );
   };
 
+  const categories = [...new Set(plants.map((plant) => plant.category))];
+
   return (
     <div className="product-listing">
       <h2>Our Plants</h2>
-      <div className="product-cards">
-        {plants.map((plant) => (
-          <ProductCard
-            key={plant.id}
-            name={plant.name}
-            price={plant.price}
-            image={plant.image}
-            addToCart={() => handleAddToCart(plant)}
-          />
-        ))}
-      </div>
+      {categories.map((category) => (
+        <div key={category} className="plant-category">
+          <h3>{category}</h3>
+          <div className="product-cards">
+            {plants
+              .filter((plant) => plant.category === category)
+              .map((plant) => (
+                <ProductCard
+                  key={plant.id}
+                  name={plant.name}
+                  price={plant.price}
+                  image={plant.image}
+                  addToCart={() => handleAddToCart(plant)}
+                />
+              ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

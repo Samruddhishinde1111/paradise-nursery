@@ -1,22 +1,46 @@
-.landing {
-    text-align: center;
-    padding-top: 100px;
-    color: #fff;
-    text-shadow: 1px 1px 3px #000;
-  }
-  
-  .get-started {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #3c9a5f;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  .get-started:hover {
-    background-color: #2c7a4f;
-  }
-  
+.landing-page {
+  height: 100vh;
+  overflow: hidden; 
+  background-image: url('/background.jpeg'); /* ✅ Only here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.start-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #27ae60;
+}

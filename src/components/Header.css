@@ -2,38 +2,61 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px 30px;
+    background-color: rgba(26, 100, 63, 0.925); /* ✅ transparent black */
+    padding: 1rem 2rem;
+    height: 80px; /* ✅ same height as before */
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.626);
   }
   
   .logo {
-    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem; /* ✅ make logo text bigger */
     font-weight: bold;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
+    gap: 0.5rem;
     color: white;
-    font-size: 1.1rem;
   }
   
-  .cart-link {
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #2ecc71;
+  }
+  
+  .cart-icon {
     position: relative;
+    display: flex;
+    align-items: center;
   }
   
   .cart-count {
-    background-color: #4CAF50;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 0.8rem;
     position: absolute;
     top: -8px;
-    right: -10px;
+    right: -12px;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
